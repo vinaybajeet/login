@@ -19,6 +19,7 @@ body{
   color: #737373;
   border-radius: 1px;
   text-align: center;
+}
 .content{
   padding: 10px 0;
 }
@@ -31,34 +32,38 @@ body{
   flex-direction: column;
   row-gap: 14px;
 }
- .input{
+ .inputbox{
    display: flex;
    flex-direction: column;
    row-gap: 9px;
+   background:RGB(250,250,250);
  }
- .content label{
-   display: flex;
-   align-items: center;
-   width: 189px;
-   height: 38px;
-   position: relative;
-   border: 1px solid #696767;
-   background: rgb(250,250,250);
-   border-radius: 3px;
- }
- .content label span{
-   position: absolute;
-   left: 8px;
-   font-size: 12px;
- }
- .content input{
-   border: 0;
+ .content .inputbox label{
+  position: absolute;
+  margin-left: 10px;
+  padding: 1.250px 0.767
+  color: black;
+  transition: 0.3s;
+  font-size: 12px;
+}
+ .content .inputbox input:focus ~ label,
+ .content.inputbox input:valid ~ label,
+ .content .inputbox input:not([value=""]) ~ label {
+  margin-top: -5px;
+  color: #1a73e8;
+  background-color: white;
+  height: 10px;
+  font-size: 10px;
+}
+ .content .inputbox input{
+   border: 10px solid #000000;
+   border-width: 1.5px;
    background: transparent;
    font-size: 12px;
-   outline: 9px 8px 7px 8px;
+   outline: 10px 9px 8px 9px;
    width: 100%;
  }
- .content button{
+ .btn button{
    background-color: rgb(14,132,230);
    border: 0;
    padding: 7px 15px;
@@ -66,6 +71,7 @@ body{
    color: #ffff;
    font-weight: 800;
    font-size: 15px;
+   width: 100%;
  }
  .forgot-buttons button{
    background: none;
